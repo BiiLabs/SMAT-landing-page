@@ -107,7 +107,7 @@ gulp.task("deploy-clean", function () {
 
 gulp.task("deploy-sass", function () {
   return gulp
-    .src(["sass/**/*.scss", "!sass/vars.scss"]) // exclude var.scss fail
+    .src(["src/sass/**/*.scss", "!src/sass/vars.scss"]) // exclude var.scss fail
     .pipe(sass().on("error", sass.logError))
     .pipe(cleanCSS({}))
     .pipe(gulp.dest("./deploy/css"));
@@ -115,7 +115,7 @@ gulp.task("deploy-sass", function () {
 
 gulp.task("deploy-js", function () {
   return gulp
-    .src("js/**/*.js")
+    .src("src/js/**/*.js")
     .pipe(
       uglify({
         compress: {
