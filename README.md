@@ -18,4 +18,12 @@ yarn start
 yarn build
 ```
 
-The static files will save to `deploy/`
+The static files will be saved to `deploy/`.
+
+## Deploying
+
+```
+yarn deploy
+```
+
+The static file will be push to `gh-pages` branch.
